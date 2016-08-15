@@ -11,7 +11,7 @@
         if (error) {
             console.error(error);
         } else {
-            var features = topojson.feature(data, data.objects['oslo-landuse']);
+            var features = topojson.feature(data, data.objects['oslo-natural']);
             console.log(features)
             projection.fitSize([1600, 800], features);
             console.log(projection.scale())
@@ -31,18 +31,18 @@
                     d3.select(this)
                         .style('fill', '');
                 });
-            d3.json('data/oslo-roads.json', (error, points) => {
-                svg.selectAll('.point')
-                    .data(points.features)
-                    .enter()
-                    .append('path')
-                    .classed('point', true)
-                    .attr('d', d => pathGenerator(d));
-                    // .append('circle')
-                    // .attr('cx', d => projection(d.geometry.coordinates)[0])
-                    // .attr('cy', d => projection(d.geometry.coordinates)[1])
-                    // .attr('r', '2');
-            })
+            // d3.json('data/oslo-roads.json', (error, points) => {
+            //     svg.selectAll('.point')
+            //         .data(points.features)
+            //         .enter()
+            //         .append('path')
+            //         .classed('point', true)
+            //         .attr('d', d => pathGenerator(d));
+            //         // .append('circle')
+            //         // .attr('cx', d => projection(d.geometry.coordinates)[0])
+            //         // .attr('cy', d => projection(d.geometry.coordinates)[1])
+            //         // .attr('r', '2');
+            // })
         }
 
     })

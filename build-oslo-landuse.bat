@@ -1,1 +1,1 @@
-./node_modules/.bin/topojson -o src/data/oslo.topojson src/data/oslo-landuse.json -p
+./node_modules/.bin/topojson -o src/data/oslo.topojson src/data/oslo-natural.json -p
