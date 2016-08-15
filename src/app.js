@@ -11,7 +11,7 @@
         if (error) {
             console.error(error);
         } else {
-            var features = topojson.feature(data, data.objects['norway-south-provinces']);
+            var features = topojson.feature(data, data.objects['oslo-landuse']);
             console.log(features)
             projection.fitSize([1600, 800], features);
             console.log(projection.scale())
