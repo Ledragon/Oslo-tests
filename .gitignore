@@ -1,7 +1,3 @@
-data/Norway_shapefile
-data/Norway_shapefile.zip
-
-
 # Created by https://www.gitignore.io/api/node
 
 ### Node ###
@@ -43,3 +39,5 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+data/shapes

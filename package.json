@@ -1,0 +1,17 @@
+{
+  "name": "oslo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve":"live-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.1.0",
+    "topojson": "^1.6.26",
+    "typescript": "^2.0.0"
+  }
+}

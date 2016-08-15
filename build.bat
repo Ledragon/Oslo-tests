@@ -1,0 +1,1 @@
+"C:\Program Files\GDAL\ogr2ogr.exe" -f geojson oslo-buildings.json .\data\shapes\Oslo-shp\shape\buildings.shp
