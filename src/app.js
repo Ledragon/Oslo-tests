@@ -22,8 +22,8 @@
                 .append('path')
                 // .attr('class', d => d.properties.type)
                 .attr('d', d => pathGenerator(d))
-                .on('mouseenter', function (d) {
-                    // console.log(d.properties);
+                .on('click', function (d) {
+                    console.log(d.properties);
                     d3.select(this)
                         .style('fill', 'red');
                 })
@@ -31,12 +31,17 @@
                     d3.select(this)
                         .style('fill', '');
                 });
-            d3.json('data/oslo-places.json', (error, points) => {
+            d3.json('data/oslo-roads.json', (error, points) => {
                 svg.selectAll('.point')
                     .data(points.features)
                     .enter()
                     .append('path')
+                    .classed('point', true)
                     .attr('d', d => pathGenerator(d));
+                    // .append('circle')
+                    // .attr('cx', d => projection(d.geometry.coordinates)[0])
+                    // .attr('cy', d => projection(d.geometry.coordinates)[1])
+                    // .attr('r', '2');
             })
         }
 
