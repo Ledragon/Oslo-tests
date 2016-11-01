@@ -7,11 +7,12 @@
         .projection(projection);
 
     var svg = d3.select('svg');
-    d3.json('data/oslo.topojson', (error, data) => {
+    d3.json('data/shapes/N2000-Kartdata-master/NO_Admin_UTM33.topojson', (error, data) => {
         if (error) {
             console.error(error);
         } else {
-            var features = topojson.feature(data, data.objects['oslo-natural']);
+            var features = topojson.feature(data, data.objects['NO_Fylker_pol']);
+            // var features = data//.features
             console.log(features)
             projection.fitSize([1600, 800], features);
             console.log(projection.scale())
